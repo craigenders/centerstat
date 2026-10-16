@@ -1,0 +1,13 @@
+# Model 1: Linear regression with incomplete data
+
+DATA: inflammation.dat;                      # text data file
+VARIABLES: id female elstress age
+  inflam1:inflam4 inflam dpdd hdd;           # variable list
+ORDINAL: female;                             # binary/ordinal variables
+NOMINAL: elstress;                           # automatic dummy coding
+MISSING: NA;                                 # missing value code
+CENTER: inflam age;                          # grand mean centering
+MODEL: dpdd ~ inflam elstress female age;    # regression equation
+SEED: 90291;                                 # random number seed
+BURN: 10000;                                 # warm-up iterations
+ITER: 10000;                                 # analysis iterations
