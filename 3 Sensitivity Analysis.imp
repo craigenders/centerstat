@@ -11,4 +11,3 @@ MODEL: yjt(dpdd - 6) ~ inflam elstress female age;   # normalized outcome
 SEED: 90291;                                      # random number seed
 BURN: 10000;                                      # warm-up iterations
 ITER: 10000;                                      # analysis iterations
-NIMPS: 20;                                        # save 20 imputed data sets
